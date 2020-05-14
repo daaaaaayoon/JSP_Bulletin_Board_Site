@@ -12,17 +12,17 @@
   + [Eclipse Download](https://www.eclipse.org/downloads/)
   + [MySQL Community Downloads](https://dev.mysql.com/downloads/mysql/)
 
-### 2. 프로젝트 생성 및 서버 연결
+### 1. 프로젝트 생성 및 서버 연결
 + Eclipse IDE => Create a Dynamic Web project
   + Project Name: BBS
   + Target runtime에서 New Runtime 클릭 후 Apache Tomcat 8.5v 선택 후 Next
   + Tomcat Installation directory에 설치한 apache-tomcat-8.5.14 경로 입력
 
-### 3. 웹 페이지 파일 만들기
+### 2. 웹 페이지 파일 만들기
 + WebContent : 웹 페이지 파일 저장하는 폴더 <br>
   + WebContent > New > JSP File > 파일명.jsp
 
-### 4. 데이터베이스 구축
+### 3. 데이터베이스 구축
 + 시작 > MySQL Command Line Client > MySQL 설치했을 때 설정한 비밀번호 입력
 + 회원 테이블 생성 및 확인하기
   ![jsp](https://user-images.githubusercontent.com/53184797/81903937-8347b280-95fd-11ea-95cf-993dffd96a53.png)
@@ -30,7 +30,7 @@
   ![jsp2](https://user-images.githubusercontent.com/53184797/81903942-8478df80-95fd-11ea-85f2-fb6c8c373ae5.png)
 + commit; 명령어로 저장
 
-### 5. Java Beans 만들기
+### 4. Java Beans 만들기
 + __Java Beans__: 데이터베이스의 데이터를 jsp 서버에서 관리하고 처리할 수 있도록 하는 것
 + src > New Java Package > user (패키지명)
 + user (생성된 패키지) > New Class > User(클래스 이름 - 맨앞글자 대문자)
