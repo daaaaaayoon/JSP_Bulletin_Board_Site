@@ -17,6 +17,18 @@
 </head>
 <body>
 	<%
+		// 이미 로그인 된 경우
+		String userID = null;
+		if (session.getAttribute("userID") != null){
+			userID = (String) session.getAttribute("userID");
+		}
+		if (userID != null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('이미 로그인이 되어있습니다.')");
+			script.println("location.href = 'main.jsp'");
+			script.println("</script>");
+		}	
 		//사용자가 입력을 안한 경우 고려
 		if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null 
 		|| user.getUserGender() == null || user.getUserEmail() == null){
@@ -35,7 +47,8 @@
 				script.println("history.back()");
 				script.println("</script>");
 			}
-			else {
+			else { // 회원가입 성공
+				session.setAttribute("userID", user.getUserID()); // 세션 부여
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("location.href = 'main.jsp'");
