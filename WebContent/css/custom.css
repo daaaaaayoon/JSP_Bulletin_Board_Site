@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+h1 {
+	font-family: 'Black Han Sans',
+}
