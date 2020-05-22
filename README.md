@@ -83,3 +83,22 @@
 ![wrongid](https://user-images.githubusercontent.com/53184797/81998311-2c89b980-968d-11ea-87f9-5013295a4d13.png)
 + __데이터베이스에 존재하는 아이디, 패스워드로 로그인한 경우__ => main.jsp
 ![loginsuccess](https://user-images.githubusercontent.com/53184797/81998327-314e6d80-968d-11ea-8ce0-32c976810666.png)
+
+## 배포하기
++ 웹 호스팅 서비스 이용 [Cafe24: Tomcat JSP 호스팅](https://www.cafe24.com/?controller=product_page&type=special&page=tomcat)
+
++ MySQL Web Admin 접속
+  + DataBase에 Table 생성
+
++ DB에 접속하는 부분을 변경 (웹 호스팅 설정에 따라 BbsDAO, UserDAO 의 dbURL, dbID, dbPassword 변경)
++ jdk 버전 DownGrade : Project 속성 > Project Facets > Java Version Downgrade
++ 작성 파일들 모두 실제 웹서버에 올리기
+  + Project 속성 > Resource > Loaction 경로 복사해서 해당 폴더로 이동 (프로젝트 폴더)
+  + 폴더에 있는 파일들을 웹 서버에 업로드 (웹 서버 접속도구 이용: 파일질라 등)
+   + www폴더 안에 BBS폴더 생성 후 프로젝트의 META-INF, WEB-INF를 제외한 모든 파일 업로드
+   + class 파일 업로드
+		+ 프로젝트 폴더 BBS > build > classes 폴더 안에 있는 모든 클래스 파일을
+		+ 웹서버 www폴더 안에 WEB-INF 폴더 > classes 폴더에 업로드
+
+### class 파일 컴파일 오류
++ 웹 서버 재시작 : PUTTY 사용
